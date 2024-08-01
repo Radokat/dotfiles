@@ -11,5 +11,4 @@
 # ridden in every subshell.
 
 test -s ~/.alias && . ~/.alias || true
-#eval "$(starship init bash)"
 alias ez='exec zsh'
