@@ -1,0 +1,207 @@
+#
+# gruvbox styled starship configuration
+#   https://starship.rs/
+#
+# by Andreas Schneider <asn@cryptomilk.org>
+#
+
+format = """
+$hostname\
+$username\
+$shlvl\
+$kubernetes\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$vcsh\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$cmd_duration\
+$line_break\
+$lua\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+$character"""
+
+[line_break]
+disabled = true
+
+[hostname]
+ssh_only = true
+format = "[  $hostname ](bg:#d65d0e fg:$style)[](bg:#458588 fg:#d65d0e)"
+style = "bold #fabd2f"
+
+[username]
+disabled = false
+show_always = true
+style_user = "bold #ffffff"
+format = "[ $user ](bg:#458588 fg:$style)[ ](bg:#504945 fg:#458588)"
+
+[directory]
+truncation_length = 5
+style = "#ffffff"
+format = "[❯ $path ](bg:#504945 fg:$style)[$lock_symbol]($lock_style)"
+
+[character]
+success_symbol = "[❯](bg:#504945 fg:bold #1bb400)[](fg:#504945)"
+error_symbol = "[❯](bg:#504945 fg:bold #cc241d)[](fg:#504945)"
+vicmd_symbol = "[](bg:#504945 fg:bold #5a9096)[](fg:#504945)"
+
+[battery]
+format = "[❯](bg:#504945 fg:#ffffff)[ $symbol$percentage ](bg:#504945 fg:$style)"
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
+
+[[battery.display]]
+threshold = 20
+style = "bold #fb4934"
+
+[git_branch]
+symbol = " "
+format = "[❯ $symbol$branch ](bg:#504945 fg:$style)"
+style = "bold #ff269a"
+
+[git_commit]
+format = "([\\($hash\\) ](bg:#504945 fg:$style))([\\($tag\\)](bg:#504945 fg:$style) )"
+
+[git_state]
+format = "([$state( $progress_current/$progress_total) ](bg:#504945 fg:$style))"
+
+[git_status]
+format = "([$ahead$behind$diverged$staged$modified ](bg:#504945 fg:$style))"
+style = "bold #ff269a"
+ahead = "[](fg:bold #ff269a)"
+behind = "[](fg:bold #d65d0e)"
+diverged = "[V](fg:bold #d65d0e)"
+staged = '[+\($count\)](bg:#504945 fg:bold #1bb400)'
+modified = '[~\($count\)](bg:#504945 fg:bold #fb4934)'
+
+[jobs]
+format = "([$symbol$number ](bg:#504945 fg:$style))"
+symbol = ""
+
+[cmd_duration]
+min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+format = "[❯ $duration ](bg:#504945 fg:$style)"
+style = "#ffffff"
+
+[package]
+disabled = true
+
+# techno specific
+[aws]
+disabled = true
+symbol = " "
+
+[cmake]
+disabled = true
+
+[conda]
+disabled = true
+symbol = " "
+
+[dart]
+disabled = true
+symbol = " "
+
+[elixir]
+disabled = true
+symbol = " "
+
+[elm]
+disabled = true
+symbol = " "
+
+[golang]
+disabled = true
+symbol = " "
+
+[hg_branch]
+disabled = true
+
+[java]
+disabled = true
+symbol = " "
+
+[julia]
+disabled = true
+
+[lua]
+disabled = true
+
+[nix_shell]
+disabled = true
+symbol = " "
+
+[nodejs]
+disabled = true
+symbol = " "
+
+[php]
+disabled = true
+symbol = " "
+
+[python]
+disabled = true
+symbol = " "
+
+[perl]
+disabled = true
+
+[ruby]
+disabled = true
+symbol = " "
+
+[rust]
+disabled = true
+symbol = " "
+
+[kotlin]
+disabled = true
+
+[vagrant]
+disabled = true
