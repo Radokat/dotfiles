@@ -34,6 +34,8 @@ bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey "^[[3~" delete-char
+bindkey    "\e[7~"    beginning-of-line
+bindkey    "\e[8~"    end-of-line
 
 HISTSIZE=100000
 HISTFILE=~/.zsh_history
