@@ -1,0 +1,1 @@
+sudo zypper in alacritty tmux zsh starship zoxide chezmoi git vim fzf lsd
